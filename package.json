@@ -1,8 +1,8 @@
 {
-  "name": "project-template-name",
+  "name": "team-page-test",
   "version": "0.0.1",
   "private": true,
-  "homepage": "https://VitaliyZavgorodniy.github.io/project-template-name/",
+  "homepage": "https://VitaliyZavgorodniy.github.io/team-page-test/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.16.3",
