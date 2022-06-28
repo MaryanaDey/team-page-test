@@ -7,6 +7,7 @@ import CommonInput from 'components/UI-kit/inputs/CommonInput';
 import RadioInput from 'components/UI-kit/inputs/RadioInput';
 import ImageInput from 'components/UI-kit/inputs/ImageInput';
 import CommonButton from 'components/UI-kit/buttons/CommonButton';
+import CompletedForm from './CompletedForm';
 
 import { validateCreateUser } from 'helpers/validateCreateUser';
 
@@ -30,7 +31,6 @@ const RegisterForm = ({
     validate: validateCreateUser,
     enableReinitialize: true,
     onSubmit: (data) => {
-      console.log(data);
       createUser(data);
     },
   });
@@ -49,7 +49,7 @@ const RegisterForm = ({
     loadSettings();
   }, []);
 
-  if (isCompleted) return <div>completed</div>;
+  if (isCompleted) return <CompletedForm />;
 
   return (
     <Wrapper>

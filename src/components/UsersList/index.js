@@ -10,6 +10,7 @@ const mapStateToProps = (state) => ({
   isFetching: usersSelectors.getFetching(state),
   totalPages: usersSelectors.getTotalPages(state),
   currentPage: usersSelectors.getCurrentPage(state),
+  formCompleted: usersSelectors.getIsCompletedForm(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({

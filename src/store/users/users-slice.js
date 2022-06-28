@@ -41,9 +41,9 @@ const usersSlice = createSlice({
     },
     [usersOperations.createUser.fulfilled]: (state) => {
       state.isFetching = false;
-      state.list = [];
-      state.currentPage = 1;
       state.isCompletedForm = true;
+      state.currentPage = 1;
+      state.list = [];
     },
     [usersOperations.createUser.rejected]: (state) => {
       state.isFetching = false;

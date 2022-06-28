@@ -21,19 +21,6 @@ const fetchUsers = createAsyncThunk(
   }
 );
 
-const getUser = createAsyncThunk(
-  'users/getuser',
-  async (id, { rejectWithValue }) => {
-    try {
-      const { data } = await axios.get('/users', { params: { id } });
-
-      return data;
-    } catch (err) {
-      return rejectWithValue(err?.response?.data);
-    }
-  }
-);
-
 const createUser = createAsyncThunk(
   'users/createuser',
   async (payload, { rejectWithValue }) => {
@@ -69,7 +56,6 @@ const createUser = createAsyncThunk(
 
 const operations = {
   fetchUsers,
-  getUser,
   createUser,
 };
 

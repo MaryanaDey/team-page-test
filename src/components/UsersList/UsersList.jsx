@@ -14,10 +14,11 @@ const UsersList = ({
   totalPages,
   fetchUsers,
   incrementPage,
+  formCompleted,
 }) => {
   useEffect(() => {
     fetchUsers(currentPage);
-  }, [currentPage]);
+  }, [currentPage, formCompleted]);
 
   const renderList = () =>
     list.map((item) => (
