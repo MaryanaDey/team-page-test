@@ -47,6 +47,7 @@ const RegisterForm = ({
 
   useEffect(() => {
     loadSettings();
+    // eslint-disable-next-line
   }, []);
 
   if (isCompleted) return <CompletedForm />;

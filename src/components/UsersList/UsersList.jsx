@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import styled from 'styled-components';
 import { breakpoints } from 'constants/breakpoints';
 
@@ -18,6 +18,7 @@ const UsersList = ({
 }) => {
   useEffect(() => {
     fetchUsers(currentPage);
+    // eslint-disable-next-line
   }, [currentPage, formCompleted]);
 
   const renderList = () =>
