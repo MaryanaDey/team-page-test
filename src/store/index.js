@@ -1,5 +1,19 @@
-import configureStore from './configureStore.js';
+import { configureStore } from '@reduxjs/toolkit';
 
-const store = configureStore();
+import thunk from 'redux-thunk';
+import thunkMiddleware from 'redux-thunk';
+
+import { usersReducer } from './users';
+import { settingsReducer } from './settings';
+
+const middleware = [thunk, thunkMiddleware];
+
+const store = configureStore({
+  reducer: {
+    users: usersReducer,
+    settings: settingsReducer,
+  },
+  middleware,
+});
 
 export default store;
